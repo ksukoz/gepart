@@ -138,6 +138,7 @@
 	&-img-wrap {
 		position: relative;
 		width: 54%;
+		height: 95%;
 		padding-top: 4rem;
 
 		&::before {
@@ -156,6 +157,16 @@
 		position: relative;
 		display: block;
 		width: 80%;
+		text-align: center;
+
+		& img {
+			width: 70%;
+			text-align: center;
+
+			@include respond(big-desktop) {
+				width: 100%;
+			}
+		}
 
 		&::before,
 		&::after {
@@ -176,6 +187,121 @@
 			top: 50%;
 
 			transform: matrix(-1, 0, 0, 1, 0, 0) rotate(45deg);
+		}
+	}
+
+	&-img--cat {
+		position: absolute;
+
+		top: 55%;
+
+		@include respond(big-desktop) {
+			top: 50%;
+		}
+
+		& img {
+			width: 70%;
+
+			@include respond(big-desktop) {
+				width: 100%;
+			}
+		}
+	}
+
+	&-img-text {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		font: {
+			family: 'Besom 2';
+			size: 4.7rem;
+		}
+		line-height: 1;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 200px;
+			height: 85px;
+			bottom: -95px;
+			left: 0;
+			background: url(../img/waves--1.png) no-repeat;
+			transform: rotate(15deg);
+
+			@include respond(big-desktop) {
+				bottom: -15rem;
+				left: 6rem;
+			}
+		}
+	}
+
+	&-img--ready {
+		position: relative;
+		padding-right: 30%;
+		transform: rotate(-10deg) translate(0, -5rem);
+
+		@include respond(big-desktop) {
+			padding-right: 23%;
+			transform: rotate(-10deg) translate(0, -4rem);
+		}
+
+		& span {
+			padding-left: 10rem;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+		}
+
+		&::before {
+			top: -120px;
+			left: 5rem;
+			width: 35px;
+			height: 100px;
+			background: url('../img/arrow--1.png') no-repeat;
+			transform: rotate(10deg);
+		}
+
+		&::after {
+			width: 200px;
+			height: 85px;
+			left: 0;
+			bottom: -9rem;
+			background: url(../img/waves--1.png) no-repeat;
+			transform: rotate(35deg);
+		}
+	}
+
+	&-img--mockup {
+		position: relative;
+		padding-right: 30%;
+		transform: translate(0, 8rem);
+
+		@include respond(big-desktop) {
+			padding-right: 10%;
+			transform: translate(0, 13rem);
+		}
+
+		& span {
+			padding-left: 5rem;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+		}
+
+		&::before {
+			top: -40px;
+			left: -80px;
+			width: 250px;
+			height: 100px;
+			background: url('../img/arrow--2.png') no-repeat;
+			transform: rotate(10deg);
 		}
 	}
 
