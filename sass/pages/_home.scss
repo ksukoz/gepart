@@ -1,29 +1,65 @@
 .home {
-	background: {
-		image: url('../img/main--bg.png');
-		position: 0 0;
-		size: cover;
-	}
-	width: 100vw;
-	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background: $color-grey-light-2;
 
 	&-main {
-		@include container;
+		position: relative;
+		flex: 1 1 auto;
 
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: flex-end;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+		}
+
+		&::before {
+			width: 55%;
+			height: 100%;
+			background: {
+				image: url('../img/main--gepart.png');
+				position: 99%;
+				size: cover;
+			}
+		}
+
+		&::after {
+			bottom: 0;
+			right: 0;
+			width: 30%;
+			height: 20%;
+			background: {
+				image: url('../img/main--dots.png');
+				size: cover;
+			}
+		}
+
+		&-wrap {
+			@include container;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: flex-end;
+			height: 65vh;
+		}
 
 		&-title {
 			position: relative;
-			padding: 13rem 0;
-			font-size: 5.5rem;
+			padding: 12rem 0;
+			font: {
+				family: 'Intro';
+				size: 4.5rem;
+			}
 			line-height: 1;
 			text-transform: uppercase;
 			color: $color-grey-dark;
 			writing-mode: vertical-rl;
 			transform: rotate(180deg);
+
+			@include respond(big-desktop) {
+				padding: 13rem 0;
+				font-size: 5.5rem;
+			}
 
 			&::before {
 				content: '\25B2\25B2\25B2';
@@ -32,13 +68,17 @@
 				right: 3rem;
 				font-size: 5rem;
 				letter-spacing: -15px;
+
+				@include respond(big-desktop) {
+					bottom: -1.5rem;
+				}
 			}
 		}
 
 		&-dots {
 			position: absolute;
 			left: -0.5rem;
-			top: -1rem;
+			top: -0.5rem;
 			letter-spacing: -15px;
 			font-size: 4rem;
 
@@ -55,7 +95,10 @@
 				transform: lowercase;
 			}
 			padding-right: 1rem;
-			font-size: 3rem;
+			font: {
+				family: 'Avanti';
+				size: 3rem;
+			}
 			line-height: 1;
 
 			&::before {
