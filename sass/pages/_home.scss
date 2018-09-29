@@ -1,9 +1,60 @@
 .home {
 	background: {
 		image: url('../img/main--bg.png');
-		position: 50%;
+		position: 0 0;
 		size: cover;
 	}
 	width: 100vw;
 	height: 100vh;
+
+	&-main {
+		@include container;
+
+		display: flex;
+		justify-content: flex-end;
+
+		&-title {
+			position: relative;
+			padding: 15rem 0;
+			font-size: 5.5rem;
+			line-height: 1;
+			text-transform: uppercase;
+			color: $color-grey-dark;
+			writing-mode: vertical-rl;
+			transform: rotate(180deg);
+
+			&::before,
+			&::after {
+			}
+
+			&::before {
+				content: '\25B2\25B2\25B2';
+				position: absolute;
+				bottom: 3rem;
+				right: 3rem;
+				font-size: 5rem;
+				letter-spacing: -15px;
+			}
+
+			// &::after {
+			// 	content: '';
+			// 	top: 2rem;
+			// 	left: 0;
+			// 	font-size: 4rem;
+			// 	letter-spacing: -15px;
+			// }
+		}
+
+		&-dots {
+			position: absolute;
+			left: 0;
+			top: 1rem;
+			letter-spacing: -15px;
+			font-size: 4rem;
+
+			&--orange {
+				color: $color-secondary;
+			}
+		}
+	}
 }

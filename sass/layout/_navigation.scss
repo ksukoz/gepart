@@ -1,5 +1,6 @@
 .navigation {
 	position: relative;
+	height: calc(5rem + 55px);
 	padding-top: 1rem;
 
 	&::before,
@@ -28,6 +29,7 @@
 
 	&-list {
 		display: flex;
+		height: max-content;
 		padding-top: 45px;
 		list-style: none;
 		z-index: 2;
