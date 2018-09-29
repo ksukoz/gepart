@@ -35,20 +35,22 @@ function scrollPage(scrollSize) {
 	}
 	isAnimating = true;
 	var yPos = getNewYPos(scrollSize);
-	console.log(yPos);
-	// main.style.transform =
-	// 	'translate3d(0px,' + (parseFloat(yPos) !== 0 ? parseFloat(yPos) + 100 + 'px' : '0px') + ',0px)';
+
+	// if (Math.abs(parseFloat(yPos))) {
 	main.style.transform = 'translate3d(0px,' + yPos + ',0px)';
+	// }
 }
 
 function getNewYPos(add) {
 	var oldYPos = main.style.transform.split(',')[1];
 	oldYPos = parseInt(oldYPos.replace(/px/, ''));
 	var newYPos = oldYPos + add;
-	if (newYPos > 0) {
+	if (Math.abs(newYPos) > pageHeight * 6 || newYPos > 0) {
 		isAnimating = false;
+		return oldYPos;
+	} else {
+		return Math.min(0, newYPos) + 'px';
 	}
-	return Math.min(0, newYPos) + 'px';
 }
 
 main.addEventListener('transitionend', function() {

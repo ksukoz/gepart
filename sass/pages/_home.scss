@@ -1,3 +1,10 @@
+.main {
+	transform: translate3d(0px, 0px, 0px);
+	transition: all 700ms ease;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+}
+
 .home {
 	display: flex;
 	flex-direction: column;
@@ -361,9 +368,48 @@
 	}
 }
 
-.main {
-	transform: translate3d(0px, 0px, 0px);
-	transition: all 700ms ease;
-	overflow-y: hidden;
-	scroll-behavior: smooth;
+.design {
+	background: {
+		image: url('../img/design--bg.png');
+		position: 50%;
+		size: cover;
+	}
+	width: 100vw;
+	height: 100vh;
+}
+
+.polygraphy {
+	background: {
+		image: url('../img/polygraphy--bg.png');
+		position: 50%;
+		size: cover;
+	}
+	width: 100vw;
+	height: 100vh;
+}
+
+.video {
+	background: {
+		image: url('../img/video--bg.png');
+		position: 50%;
+		size: cover;
+	}
+	width: 100vw;
+	height: 100vh;
+}
+
+.web {
+	background: {
+		image: url('../img/web--bg.png');
+		position: 50%;
+		size: cover;
+	}
+	width: 100vw;
+	height: 100vh;
+}
+
+.contacts {
+	background: #000082;
+	width: 100vw;
+	height: 100vh;
 }
