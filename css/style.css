@@ -196,6 +196,9 @@ body {
   .navigation::after {
     right: 0;
     width: calc((100% - 1200px) / 2 + 1200px - 130px); }
+    @media (max-width: 75em) {
+      .navigation::after {
+        width: calc((100% - 1024px) / 2 + 1024px - 130px); } }
   .navigation-wrap {
     min-width: 1024px;
     max-width: 1200px;
@@ -241,25 +244,31 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: #eee;
-  position: relative; }
-  .home::before, .home::after {
-    content: '';
-    position: absolute; }
-  .home::before {
-    width: 55%;
-    height: 100%;
-    background-image: url("../img/main--gepart.png");
-    background-position: 99%;
-    background-size: cover; }
-  .home::after {
-    bottom: 0;
-    right: 0;
-    width: 30%;
-    height: 20%;
-    background-image: url("../img/main--dots.png");
-    background-size: cover; }
+  background: #eee; }
   .home-main-wrap {
+    position: relative;
+    height: 100vh;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    backface-visibility: hidden; }
+    .home-main-wrap::before, .home-main-wrap::after {
+      content: '';
+      position: absolute; }
+    .home-main-wrap::before {
+      width: 55%;
+      height: 100%;
+      background-image: url("../img/main--gepart.png");
+      background-position: 99%;
+      background-size: cover; }
+    .home-main-wrap::after {
+      bottom: 0;
+      right: 0;
+      width: 30%;
+      height: 20%;
+      background-image: url("../img/main--dots.png");
+      background-size: cover; }
+  .home-main-container {
     min-width: 1024px;
     max-width: 1200px;
     margin: 0 auto;
@@ -268,13 +277,9 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     height: 65vh;
-    margin-top: 13vh;
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    backface-visibility: hidden; }
+    margin-top: 13vh; }
     @media (min-width: 112.5em) {
-      .home-main-wrap {
+      .home-main-container {
         margin-top: 10vh; } }
   .home-main-title {
     position: relative;
@@ -349,19 +354,10 @@ body {
     width: 54%;
     height: 95%;
     padding-top: 4rem; }
-    .about-img-wrap::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 40%;
-      width: 200px;
-      height: 100px;
-      background: url("../img/waves--1.png") no-repeat;
-      z-index: 2; }
   .about-img--gepard {
     position: relative;
     display: block;
-    width: 80%;
+    width: 90%;
     text-align: center; }
     .about-img--gepard img {
       width: 70%;
@@ -369,19 +365,6 @@ body {
       @media (min-width: 112.5em) {
         .about-img--gepard img {
           width: 100%; } }
-    .about-img--gepard::before, .about-img--gepard::after {
-      content: '';
-      position: absolute;
-      width: 100px;
-      height: 50px;
-      background: url("../img/strokes.png") no-repeat; }
-    .about-img--gepard::before {
-      right: -50px;
-      top: 20%; }
-    .about-img--gepard::after {
-      left: -75px;
-      top: 50%;
-      transform: matrix(-1, 0, 0, 1, 0, 0) rotate(45deg); }
   .about-img--cat {
     position: absolute;
     top: 55%; }
@@ -401,23 +384,10 @@ body {
     font-family: 'Besom 2';
     font-size: 4.7rem;
     line-height: 1; }
-    .about-img-text::after {
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 85px;
-      bottom: -95px;
-      left: 0;
-      background: url(../img/waves--1.png) no-repeat;
-      transform: rotate(15deg); }
-      @media (min-width: 112.5em) {
-        .about-img-text::after {
-          bottom: -15rem;
-          left: 6rem; } }
   .about-img--ready {
     position: relative;
     padding-right: 30%;
-    transform: rotate(-10deg) translate(0, -5rem); }
+    transform: rotate(-10deg) translate(0, -8rem); }
     @media (min-width: 112.5em) {
       .about-img--ready {
         padding-right: 23%;
@@ -438,17 +408,17 @@ body {
       width: 200px;
       height: 85px;
       left: 0;
-      bottom: -9rem;
+      bottom: -7rem;
       background: url(../img/waves--1.png) no-repeat;
       transform: rotate(35deg); }
   .about-img--mockup {
     position: relative;
     padding-right: 30%;
-    transform: translate(0, 8rem); }
+    transform: translate(0, 0); }
     @media (min-width: 112.5em) {
       .about-img--mockup {
         padding-right: 10%;
-        transform: translate(0, 13rem); } }
+        transform: translate(0, 9rem); } }
     .about-img--mockup span {
       padding-left: 5rem; }
     .about-img--mockup::before, .about-img--mockup::after {
@@ -511,7 +481,7 @@ body {
     padding: 0 15%;
     padding-top: 8%; }
     .design-wrap.animate {
-      animation-name: moveInLeft;
+      animation-name: moveInRight;
       animation-duration: 1s;
       animation-timing-function: ease-out;
       backface-visibility: hidden; }

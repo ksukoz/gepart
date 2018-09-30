@@ -10,36 +10,45 @@
 	flex-direction: column;
 	height: 100vh;
 	background: $color-grey-light-2;
-	position: relative;
 
-	&::before,
-	&::after {
-		content: '';
-		position: absolute;
-	}
+	&-main-wrap {
+		position: relative;
 
-	&::before {
-		width: 55%;
-		height: 100%;
-		background: {
-			image: url('../img/main--gepart.png');
-			position: 99%;
-			size: cover;
+		height: 100vh;
+		animation-name: moveInRight;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+		backface-visibility: hidden;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
 		}
-	}
 
-	&::after {
-		bottom: 0;
-		right: 0;
-		width: 30%;
-		height: 20%;
-		background: {
-			image: url('../img/main--dots.png');
-			size: cover;
+		&::before {
+			width: 55%;
+			height: 100%;
+			background: {
+				image: url('../img/main--gepart.png');
+				position: 99%;
+				size: cover;
+			}
+		}
+
+		&::after {
+			bottom: 0;
+			right: 0;
+			width: 30%;
+			height: 20%;
+			background: {
+				image: url('../img/main--dots.png');
+				size: cover;
+			}
 		}
 	}
 	&-main {
-		&-wrap {
+		&-container {
 			@include container;
 			display: flex;
 			flex-direction: column;
@@ -47,10 +56,6 @@
 			align-items: flex-end;
 			height: 65vh;
 			margin-top: 13vh;
-			animation-name: moveInRight;
-			animation-duration: 1s;
-			animation-timing-function: ease-out;
-			backface-visibility: hidden;
 
 			@include respond(big-desktop) {
 				margin-top: 10vh;
@@ -159,22 +164,22 @@
 		height: 95%;
 		padding-top: 4rem;
 
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 40%;
-			width: 200px;
-			height: 100px;
-			background: url('../img/waves--1.png') no-repeat;
-			z-index: 2;
-		}
+		// &::before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: 40%;
+		// 	width: 200px;
+		// 	height: 100px;
+		// 	background: url('../img/waves--1.png') no-repeat;
+		// 	z-index: 2;
+		// }
 	}
 
 	&-img--gepard {
 		position: relative;
 		display: block;
-		width: 80%;
+		width: 90%;
 		text-align: center;
 
 		& img {
@@ -184,27 +189,6 @@
 			@include respond(big-desktop) {
 				width: 100%;
 			}
-		}
-
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			width: 100px;
-			height: 50px;
-			background: url('../img/strokes.png') no-repeat;
-		}
-
-		&::before {
-			right: -50px;
-			top: 20%;
-		}
-
-		&::after {
-			left: -75px;
-			top: 50%;
-
-			transform: matrix(-1, 0, 0, 1, 0, 0) rotate(45deg);
 		}
 	}
 
@@ -236,28 +220,12 @@
 			size: 4.7rem;
 		}
 		line-height: 1;
-
-		&::after {
-			content: '';
-			position: absolute;
-			width: 200px;
-			height: 85px;
-			bottom: -95px;
-			left: 0;
-			background: url(../img/waves--1.png) no-repeat;
-			transform: rotate(15deg);
-
-			@include respond(big-desktop) {
-				bottom: -15rem;
-				left: 6rem;
-			}
-		}
 	}
 
 	&-img--ready {
 		position: relative;
 		padding-right: 30%;
-		transform: rotate(-10deg) translate(0, -5rem);
+		transform: rotate(-10deg) translate(0, -8rem);
 
 		@include respond(big-desktop) {
 			padding-right: 23%;
@@ -287,7 +255,7 @@
 			width: 200px;
 			height: 85px;
 			left: 0;
-			bottom: -9rem;
+			bottom: -7rem;
 			background: url(../img/waves--1.png) no-repeat;
 			transform: rotate(35deg);
 		}
@@ -296,11 +264,11 @@
 	&-img--mockup {
 		position: relative;
 		padding-right: 30%;
-		transform: translate(0, 8rem);
+		transform: translate(0, 0);
 
 		@include respond(big-desktop) {
 			padding-right: 10%;
-			transform: translate(0, 13rem);
+			transform: translate(0, 9rem);
 		}
 
 		& span {
@@ -393,7 +361,7 @@
 		padding: 0 15%;
 		padding-top: 8%;
 		&.animate {
-			animation-name: moveInLeft;
+			animation-name: moveInRight;
 			animation-duration: 1s;
 			animation-timing-function: ease-out;
 			backface-visibility: hidden;

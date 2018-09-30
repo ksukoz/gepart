@@ -18,6 +18,10 @@
 	&::after {
 		right: 0;
 		width: calc((100% - 1200px) / 2 + 1200px - 130px);
+
+		@include respond(tab-land) {
+			width: calc((100% - 1024px) / 2 + 1024px - 130px);
+		}
 	}
 
 	&-wrap {
