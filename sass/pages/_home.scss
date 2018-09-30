@@ -387,6 +387,109 @@
 	}
 	width: 100vw;
 	height: 100vh;
+
+	&-wrap {
+		@include container;
+		padding: 0 15%;
+		padding-top: 8%;
+		&.animate {
+			animation-name: moveInLeft;
+			animation-duration: 1s;
+			animation-timing-function: ease-out;
+			backface-visibility: hidden;
+		}
+
+		@include respond(tab-land) {
+			padding: 0 13%;
+			padding-top: 20%;
+		}
+
+		@include respond(big-desktop) {
+			padding: 0 5%;
+			padding-top: 15%;
+		}
+
+		p {
+			font: {
+				family: 'Avanti';
+				size: 4rem;
+			}
+			line-height: 1;
+		}
+
+		h3 {
+			font: {
+				family: 'Avanti';
+				size: 4rem;
+			}
+			background-color: #eb6ca9;
+			width: max-content;
+			padding: 0 1rem;
+			text-transform: uppercase;
+			color: $color-white;
+		}
+
+		h4 {
+			font: {
+				family: 'Avanti';
+				size: 3rem;
+				weight: normal;
+			}
+			margin-top: 12rem;
+			padding: 0 5rem;
+			border-top: 2px solid $color-white;
+			width: max-content;
+
+			@include respond(tab-land) {
+				margin-top: 3rem;
+			}
+
+			@include respond(big-desktop) {
+				margin-left: 5rem;
+				margin-top: 15rem;
+			}
+		}
+
+		h5 {
+			font: {
+				size: 2rem;
+				family: 'Intro';
+			}
+			text-align: center;
+			line-height: 1;
+
+			&img {
+				vertical-align: sub;
+			}
+
+			& span {
+				color: #eb6ca9;
+			}
+		}
+	}
+
+	&-bordered {
+		width: max-content;
+		padding: 2rem;
+		border: 4px solid #0096c2;
+	}
+
+	&-title {
+		font: {
+			size: 6rem;
+			family: 'Intro';
+		}
+		color: #024e82;
+	}
+
+	&-list {
+		list-style: none;
+		font: {
+			family: 'Avanti';
+			size: 3rem;
+		}
+		line-height: 1;
+	}
 }
 
 .polygraphy {

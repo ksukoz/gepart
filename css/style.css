@@ -504,6 +504,74 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh; }
+  .design-wrap {
+    min-width: 1024px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15%;
+    padding-top: 8%; }
+    .design-wrap.animate {
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      backface-visibility: hidden; }
+    @media (max-width: 75em) {
+      .design-wrap {
+        padding: 0 13%;
+        padding-top: 20%; } }
+    @media (min-width: 112.5em) {
+      .design-wrap {
+        padding: 0 5%;
+        padding-top: 15%; } }
+    .design-wrap p {
+      font-family: 'Avanti';
+      font-size: 4rem;
+      line-height: 1; }
+    .design-wrap h3 {
+      font-family: 'Avanti';
+      font-size: 4rem;
+      background-color: #eb6ca9;
+      width: max-content;
+      padding: 0 1rem;
+      text-transform: uppercase;
+      color: #fff; }
+    .design-wrap h4 {
+      font-family: 'Avanti';
+      font-size: 3rem;
+      font-weight: normal;
+      margin-top: 12rem;
+      padding: 0 5rem;
+      border-top: 2px solid #fff;
+      width: max-content; }
+      @media (max-width: 75em) {
+        .design-wrap h4 {
+          margin-top: 3rem; } }
+      @media (min-width: 112.5em) {
+        .design-wrap h4 {
+          margin-left: 5rem;
+          margin-top: 15rem; } }
+    .design-wrap h5 {
+      font-size: 2rem;
+      font-family: 'Intro';
+      text-align: center;
+      line-height: 1; }
+      .design-wrap h5img {
+        vertical-align: sub; }
+      .design-wrap h5 span {
+        color: #eb6ca9; }
+  .design-bordered {
+    width: max-content;
+    padding: 2rem;
+    border: 4px solid #0096c2; }
+  .design-title {
+    font-size: 6rem;
+    font-family: 'Intro';
+    color: #024e82; }
+  .design-list {
+    list-style: none;
+    font-family: 'Avanti';
+    font-size: 3rem;
+    line-height: 1; }
 
 .polygraphy {
   background-image: url("../img/polygraphy--bg.png");
