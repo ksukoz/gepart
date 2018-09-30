@@ -43,9 +43,17 @@ function scrollPage(scrollSize) {
 	isAnimating = true;
 	var yPos = getNewYPos(scrollSize);
 
-	// if (Math.abs(parseFloat(yPos))) {
+	scrollLinks.forEach(function(link, i) {
+		if (document.querySelector('#' + link.href.split('#')[1]).offsetTop === Math.abs(parseFloat(yPos))) {
+			link.classList.add('active');
+		} else {
+			link.classList.remove('active');
+		}
+	});
+
+	console.log(yPos);
+
 	main.style.transform = 'translate3d(0px,' + yPos + ',0px)';
-	// }
 }
 
 function getNewYPos(add) {
