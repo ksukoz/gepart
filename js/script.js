@@ -10,6 +10,13 @@ main.style.transform = 'translate3d(0px,0px,0px)';
 scrollLinks.forEach(function(link, i) {
 	link.addEventListener('click', function(e) {
 		e.preventDefault();
+		scrollLinks.forEach(function(item, k) {
+			if (k !== i) {
+				item.classList.remove('active');
+			} else {
+				item.classList.add('active');
+			}
+		});
 		main.style.transform =
 			'translate3d(0px,' + -document.querySelector('#' + e.target.href.split('#')[1]).offsetTop + 'px, 0px)';
 	});
