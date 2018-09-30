@@ -10,8 +10,8 @@ main.style.transform = 'translate3d(0px,0px,0px)';
 scrollLinks.forEach(function(link, i) {
 	link.addEventListener('click', function(e) {
 		e.preventDefault();
-		// console.log(main.scrollTop);
-		// scrollPage(main.scrollTop - document.querySelector('#' + e.target.href.split('#')[1]).offsetTop);
+		main.style.transform =
+			'translate3d(0px,' + -document.querySelector('#' + e.target.href.split('#')[1]).offsetTop + 'px, 0px)';
 	});
 });
 
