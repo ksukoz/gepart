@@ -407,6 +407,73 @@
 	}
 	width: 100vw;
 	height: 100vh;
+
+	&-wrap {
+		@include container;
+		padding-top: 150px;
+		&.animate {
+			&.animate {
+				animation-name: moveInRight;
+				animation-duration: 1s;
+				animation-timing-function: ease-out;
+				backface-visibility: hidden;
+			}
+		}
+	}
+
+	&-right {
+		width: 40%;
+		height: 70vh;
+		margin-left: auto;
+		border: 10px solid #fff200;
+	}
+
+	&-title {
+		background-color: #fff200;
+		color: transparent;
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+
+		span {
+			font: {
+				font-family: 'Intro';
+				size: 9rem;
+			}
+			color: #231f20;
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 65%;
+	}
+
+	&-list {
+		padding: 3rem;
+		list-style: none;
+		color: $color-white;
+	}
+
+	&-item {
+		font: {
+			family: 'Avanti';
+			size: 3rem;
+		}
+		line-height: 1;
+	}
+
+	&-link-wrap {
+		text-align: center;
+		font: {
+			family: 'Avanti';
+			size: 3rem;
+		}
+		color: $color-white;
+	}
 }
 
 .web {
@@ -423,7 +490,7 @@
 		padding-top: 100px;
 
 		&.animate {
-			animation-name: moveInRight;
+			animation-name: moveInLeft;
 			animation-duration: 1s;
 			animation-timing-function: ease-out;
 			backface-visibility: hidden;

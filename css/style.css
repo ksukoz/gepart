@@ -530,6 +530,48 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh; }
+  .video-wrap {
+    min-width: 1024px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 150px; }
+    .video-wrap.animate.animate {
+      animation-name: moveInRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      backface-visibility: hidden; }
+  .video-right {
+    width: 40%;
+    height: 70vh;
+    margin-left: auto;
+    border: 10px solid #fff200; }
+  .video-title {
+    background-color: #fff200;
+    color: transparent;
+    text-align: center;
+    text-transform: uppercase; }
+    .video-title span {
+      font-font-family: 'Intro';
+      font-size: 9rem;
+      color: #231f20; }
+  .video-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65%; }
+  .video-list {
+    padding: 3rem;
+    list-style: none;
+    color: #fff; }
+  .video-item {
+    font-family: 'Avanti';
+    font-size: 3rem;
+    line-height: 1; }
+  .video-link-wrap {
+    text-align: center;
+    font-family: 'Avanti';
+    font-size: 3rem;
+    color: #fff; }
 
 .web {
   background-image: url("../img/web--bg.png");
@@ -543,7 +585,7 @@ body {
     margin: 0 auto;
     padding-top: 100px; }
     .web-wrap.animate {
-      animation-name: moveInRight;
+      animation-name: moveInLeft;
       animation-duration: 1s;
       animation-timing-function: ease-out;
       backface-visibility: hidden; }
