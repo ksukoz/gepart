@@ -600,4 +600,69 @@
 	background: #000082;
 	width: 100vw;
 	height: 100vh;
+
+	&-wrap {
+		&.animate {
+			animation-name: moveInRight;
+			animation-duration: 1s;
+			animation-timing-function: ease-out;
+			backface-visibility: hidden;
+		}
+	}
+
+	&-content {
+		@include container;
+		display: flex;
+		flex-direction: column;
+		padding-top: 110px;
+
+		.btn {
+			align-self: center;
+		}
+	}
+
+	&-list {
+		text-align: right;
+		align-self: flex-end;
+		list-style: none;
+		z-index: 3;
+	}
+
+	&-item {
+		a {
+			color: $color-white;
+			font: {
+				family: 'Perfect DOS VGA 437 Win';
+				size: 2rem;
+			}
+			text-decoration: none;
+		}
+	}
+
+	&-form {
+		display: flex;
+		flex-direction: column;
+		width: 70%;
+
+		align-self: center;
+
+		label {
+			color: $color-white;
+			font: {
+				family: 'Perfect DOS VGA 437 Win';
+				size: 2rem;
+			}
+		}
+
+		& input,
+		& textarea {
+			margin-bottom: 1rem;
+			padding: 1rem;
+			resize: none;
+		}
+
+		.btn {
+			align-self: flex-end;
+		}
+	}
 }
