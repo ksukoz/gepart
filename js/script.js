@@ -3,7 +3,6 @@ var isAnimating = false;
 var main = document.querySelector('.main');
 
 var scrollLinks = document.querySelectorAll('.navigation-link');
-// var sections = main.querySelectorAll('section');
 
 main.style.transform = 'translate3d(0px,0px,0px)';
 
@@ -15,6 +14,9 @@ scrollLinks.forEach(function(link, i) {
 				item.classList.remove('active');
 			} else {
 				item.classList.add('active');
+				document.querySelector('.' + item.href.split('#')[1] + '-wrap')
+					? document.querySelector('.' + item.href.split('#')[1] + '-wrap').classList.add('animate')
+					: '';
 			}
 		});
 		main.style.transform =
@@ -46,6 +48,9 @@ function scrollPage(scrollSize) {
 	scrollLinks.forEach(function(link, i) {
 		if (document.querySelector('#' + link.href.split('#')[1]).offsetTop === Math.abs(parseFloat(yPos))) {
 			link.classList.add('active');
+			document.querySelector('.' + link.href.split('#')[1] + '-wrap')
+				? document.querySelector('.' + link.href.split('#')[1] + '-wrap').classList.add('animate')
+				: '';
 		} else {
 			link.classList.remove('active');
 		}
