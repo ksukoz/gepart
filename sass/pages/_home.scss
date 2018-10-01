@@ -177,17 +177,6 @@
     width: 54%;
     height: 95%;
     padding-top: 4rem;
-
-    // &::before {
-    // 	content: '';
-    // 	position: absolute;
-    // 	top: 0;
-    // 	right: 40%;
-    // 	width: 200px;
-    // 	height: 100px;
-    // 	background: url('../img/waves--1.png') no-repeat;
-    // 	z-index: 2;
-    // }
   }
 
   &-img--gepard {
@@ -197,7 +186,7 @@
     text-align: center;
 
     & img {
-      width: 70%;
+      width: 60%;
       text-align: center;
 
       @include respond(big-desktop) {
@@ -212,14 +201,14 @@
     top: 55%;
 
     @include respond(big-desktop) {
-      top: 50%;
+      top: 60%;
     }
 
     & img {
-      width: 70%;
+      width: 55%;
 
       @include respond(big-desktop) {
-        width: 100%;
+        width: 85%;
       }
     }
   }
@@ -243,7 +232,7 @@
 
     @include respond(big-desktop) {
       padding-right: 23%;
-      transform: rotate(-10deg) translate(0, -4rem);
+      transform: rotate(-10deg) translate(0, -9rem);
     }
 
     & span {
@@ -277,12 +266,12 @@
 
   &-img--mockup {
     position: relative;
-    padding-right: 30%;
-    transform: translate(0, 0);
+    padding-right: 35%;
+    transform: translate(0, -4rem);
 
     @include respond(big-desktop) {
-      padding-right: 10%;
-      transform: translate(0, 9rem);
+      padding-right: 20%;
+      transform: translate(0, 1rem);
     }
 
     & span {
@@ -383,38 +372,46 @@
 
     @include respond(tab-land) {
       padding: 0 13%;
-      padding-top: 20%;
+      padding-top: 15%;
     }
 
     @include respond(big-desktop) {
       padding: 0 5%;
-      padding-top: 15%;
+      padding-top: 10%;
     }
 
     p {
       font: {
         family: "Avanti";
-        size: 4rem;
+        size: 3rem;
       }
       line-height: 1;
+
+      @include respond(big-desktop) {
+        font-size: 4rem;
+      }
     }
 
     h3 {
       font: {
         family: "Avanti";
-        size: 4rem;
+        size: 3rem;
       }
       background-color: #eb6ca9;
       width: max-content;
       padding: 0 1rem;
       text-transform: uppercase;
       color: $color-white;
+
+      @include respond(big-desktop) {
+        font-size: 4rem;
+      }
     }
 
     h4 {
       font: {
         family: "Avanti";
-        size: 3rem;
+        size: 2rem;
         weight: normal;
       }
       margin-top: 12rem;
@@ -429,6 +426,7 @@
       @include respond(big-desktop) {
         margin-left: 5rem;
         margin-top: 15rem;
+        font-size: 3rem;
       }
     }
 
@@ -440,8 +438,16 @@
       text-align: center;
       line-height: 1;
 
-      &img {
+      @include respond(big-desktop) {
+        font-size: 3rem;
+      }
+
+      & img {
         vertical-align: sub;
+
+        @include respond(big-desktop) {
+          vertical-align: baseline;
+        }
       }
 
       & span {
@@ -458,10 +464,14 @@
 
   &-title {
     font: {
-      size: 6rem;
+      size: 5rem;
       family: "Intro";
     }
     color: #024e82;
+
+    @include respond(big-desktop) {
+      font-size: 5rem;
+    }
   }
 
   &-list {
@@ -501,9 +511,9 @@
       padding-top: 150px;
     }
 
-    @media (width: 1280px) {
-      background-size: 100%;
-    }
+    // @media (width: 1280px) {
+    //   background-size: 100%;
+    // }
     height: 100vh;
 
     &.animate {
@@ -527,10 +537,13 @@
 
     @include respond(tab-land) {
       padding: 0 16%;
+
+      margin-top: -13%;
     }
 
     @include respond(big-desktop) {
       padding: 0 5%;
+      margin-top: -5%;
     }
   }
 
@@ -594,9 +607,17 @@
     span {
       font: {
         family: "Intro";
-        size: 9rem;
+        size: 6rem;
       }
       color: #231f20;
+
+      @include respond(tab-land) {
+        font-size: 5rem;
+      }
+
+      @include respond(big-desktop) {
+        font-size: 9rem;
+      }
     }
   }
 
@@ -616,18 +637,26 @@
   &-item {
     font: {
       family: "Avanti";
-      size: 3rem;
+      size: 2rem;
     }
     line-height: 1;
+
+    @include respond(big-desktop) {
+      font-size: 3rem;
+    }
   }
 
   &-link-wrap {
     text-align: center;
     font: {
       family: "Avanti";
-      size: 3rem;
+      size: 2rem;
     }
     color: $color-white;
+
+    @include respond(big-desktop) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -662,7 +691,15 @@
   &-title {
     font: {
       family: "Pixel Cyr";
-      size: 8rem;
+      size: 6rem;
+    }
+
+    @include respond(tab-land) {
+      font-size: 4rem;
+    }
+
+    @include respond(big-desktop) {
+      font-size: 8rem;
     }
   }
 
@@ -675,9 +712,17 @@
   &-item {
     font: {
       family: "Pixel Cyr";
-      size: 3rem;
+      size: 2rem;
     }
     line-height: 1.5;
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(big-desktop) {
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -718,9 +763,17 @@
       color: $color-white;
       font: {
         family: "Perfect DOS VGA 437 Win";
-        size: 2rem;
+        size: 1.5rem;
       }
       text-decoration: none;
+
+      @include respond(tab-land) {
+        font-size: 1rem;
+      }
+
+      @include respond(big-desktop) {
+        font-size: 2.5rem;
+      }
     }
   }
 
@@ -737,6 +790,14 @@
         family: "Perfect DOS VGA 437 Win";
         size: 2rem;
       }
+
+      @include respond(tab-land) {
+        font-size: 1rem;
+      }
+
+      @include respond(big-desktop) {
+        font-size: 2.5rem;
+      }
     }
 
     & input,
@@ -744,6 +805,23 @@
       margin-bottom: 1rem;
       padding: 1rem;
       resize: none;
+
+      @include respond(tab-land) {
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+      }
+    }
+
+    & textarea {
+      height: 100px;
+
+      // @include respond(tab-land) {
+      //   font-size: 1rem;
+      // }
+
+      @include respond(big-desktop) {
+        height: 200px;
+      }
     }
 
     .btn {
