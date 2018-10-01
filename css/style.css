@@ -253,7 +253,7 @@ body {
     animation-timing-function: ease-out;
     backface-visibility: hidden; }
     .home-main-wrap::before, .home-main-wrap::after {
-      content: '';
+      content: "";
       position: absolute; }
     .home-main-wrap::before {
       width: 55%;
@@ -284,8 +284,8 @@ body {
   .home-main-title {
     position: relative;
     padding: 12rem 0;
-    font-family: 'Intro';
-    font-size: 4.5rem;
+    font-family: "Intro";
+    font-size: 3.5rem;
     line-height: 1;
     text-transform: uppercase;
     color: #231f20;
@@ -294,17 +294,19 @@ body {
     @media (min-width: 112.5em) {
       .home-main-title {
         padding: 13rem 0;
-        font-size: 5.5rem; } }
+        font-size: 4.5rem; } }
     .home-main-title::before {
-      content: '\25B2\25B2\25B2';
+      content: "\25B2\25B2\25B2";
       position: absolute;
       bottom: 1.5rem;
       right: 3rem;
-      font-size: 5rem;
-      letter-spacing: -15px; }
+      font-size: 3rem;
+      letter-spacing: 0px; }
       @media (min-width: 112.5em) {
         .home-main-title::before {
-          bottom: -1.5rem; } }
+          bottom: -1.5rem;
+          font-size: 5rem;
+          letter-spacing: -15px; } }
   .home-main-dots {
     position: absolute;
     left: -0.5rem;
@@ -318,17 +320,25 @@ body {
     text-align: right;
     text-transform: lowercase;
     padding-right: 1rem;
-    font-family: 'Avanti';
-    font-size: 3rem;
+    font-family: "Avanti";
+    font-size: 2rem;
     line-height: 1; }
+    @media (min-width: 112.5em) {
+      .home-main-text {
+        font-size: 3rem; } }
     .home-main-text::before {
-      content: '';
+      content: "";
       position: absolute;
-      top: 4.3rem;
-      left: calc(7rem - 270px);
+      top: 2.5rem;
+      height: 5px;
+      left: calc(4rem - 270px);
       width: 270px;
-      height: 10px;
       background-color: #000; }
+      @media (min-width: 112.5em) {
+        .home-main-text::before {
+          top: 4.3rem;
+          left: calc(7rem - 270px);
+          height: 10px; } }
 
 .about {
   background-image: url("../img/about--bg.png");
@@ -381,7 +391,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    font-family: 'Besom 2';
+    font-family: "Besom 2";
     font-size: 4.7rem;
     line-height: 1; }
   .about-img--ready {
@@ -395,7 +405,7 @@ body {
     .about-img--ready span {
       padding-left: 10rem; }
     .about-img--ready::before, .about-img--ready::after {
-      content: '';
+      content: "";
       position: absolute; }
     .about-img--ready::before {
       top: -120px;
@@ -422,7 +432,7 @@ body {
     .about-img--mockup span {
       padding-left: 5rem; }
     .about-img--mockup::before, .about-img--mockup::after {
-      content: '';
+      content: "";
       position: absolute; }
     .about-img--mockup::before {
       top: -40px;
@@ -439,29 +449,29 @@ body {
     border: 25px solid #fff;
     border-image: url("../img/about-border.png") 30 round round; }
     .about-text-wrap::before {
-      content: 'О нас';
+      content: "О нас";
       position: absolute;
       left: -50%;
       top: -3rem;
       width: 150%;
-      font-family: 'Intro';
+      font-family: "Intro";
       font-size: 17rem;
       text-transform: uppercase;
       line-height: 0;
       opacity: 0.1; }
   .about-title {
-    font-family: 'Intro';
+    font-family: "Intro";
     font-size: 6rem;
     margin-top: 0;
     margin-bottom: 3rem;
     line-height: 1; }
   .about-text {
-    font-family: 'Avanti';
+    font-family: "Avanti";
     font-size: 3rem;
     line-height: 1; }
     .about-text--marked {
       font-size: 4rem;
-      line-height: .8; }
+      line-height: 0.8; }
   .about-typography {
     display: flex;
     flex-direction: column;
@@ -494,11 +504,11 @@ body {
         padding: 0 5%;
         padding-top: 15%; } }
     .design-wrap p {
-      font-family: 'Avanti';
+      font-family: "Avanti";
       font-size: 4rem;
       line-height: 1; }
     .design-wrap h3 {
-      font-family: 'Avanti';
+      font-family: "Avanti";
       font-size: 4rem;
       background-color: #eb6ca9;
       width: max-content;
@@ -506,7 +516,7 @@ body {
       text-transform: uppercase;
       color: #fff; }
     .design-wrap h4 {
-      font-family: 'Avanti';
+      font-family: "Avanti";
       font-size: 3rem;
       font-weight: normal;
       margin-top: 12rem;
@@ -522,7 +532,7 @@ body {
           margin-top: 15rem; } }
     .design-wrap h5 {
       font-size: 2rem;
-      font-family: 'Intro';
+      font-family: "Intro";
       text-align: center;
       line-height: 1; }
       .design-wrap h5img {
@@ -535,11 +545,11 @@ body {
     border: 4px solid #0096c2; }
   .design-title {
     font-size: 6rem;
-    font-family: 'Intro';
+    font-family: "Intro";
     color: #024e82; }
   .design-list {
     list-style: none;
-    font-family: 'Avanti';
+    font-family: "Avanti";
     font-size: 3rem;
     line-height: 1; }
 
@@ -578,7 +588,7 @@ body {
     align-self: center;
     padding: 0 12%;
     height: 30vw;
-    font-family: 'B52';
+    font-family: "B52";
     font-size: 3rem;
     line-height: 1; }
     @media (max-width: 75em) {
@@ -628,7 +638,7 @@ body {
     text-align: center;
     text-transform: uppercase; }
     .video-title span {
-      font-family: 'Intro';
+      font-family: "Intro";
       font-size: 9rem;
       color: #231f20; }
   .video-content {
@@ -641,12 +651,12 @@ body {
     list-style: none;
     color: #fff; }
   .video-item {
-    font-family: 'Avanti';
+    font-family: "Avanti";
     font-size: 3rem;
     line-height: 1; }
   .video-link-wrap {
     text-align: center;
-    font-family: 'Avanti';
+    font-family: "Avanti";
     font-size: 3rem;
     color: #fff; }
 
@@ -672,14 +682,14 @@ body {
     width: 30%;
     margin-left: auto; }
   .web-title {
-    font-family: 'Pixel Cyr';
+    font-family: "Pixel Cyr";
     font-size: 8rem; }
   .web-list {
     list-style: none;
     color: #6a400e;
     margin-bottom: 3rem; }
   .web-item {
-    font-family: 'Pixel Cyr';
+    font-family: "Pixel Cyr";
     font-size: 3rem;
     line-height: 1.5; }
 
@@ -708,7 +718,7 @@ body {
     z-index: 3; }
   .contacts-item a {
     color: #fff;
-    font-family: 'Perfect DOS VGA 437 Win';
+    font-family: "Perfect DOS VGA 437 Win";
     font-size: 2rem;
     text-decoration: none; }
   .contacts-form {
@@ -718,7 +728,7 @@ body {
     align-self: center; }
     .contacts-form label {
       color: #fff;
-      font-family: 'Perfect DOS VGA 437 Win';
+      font-family: "Perfect DOS VGA 437 Win";
       font-size: 2rem; }
     .contacts-form input,
     .contacts-form textarea {
